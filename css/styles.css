@@ -14,7 +14,7 @@
   --cl-light-slate: #8e8f99;
   --cl-cornflower: #e7e9fc;
   --cl-cloud: #f4f4fd;
-  --cl-navy-blue-modal: #2e2f42;
+  --cl-navy-blue-modal: #282e2f42;
   --cl-gray: #2e2f42;
   --cl-white: #ffffff;
   --cl-dairy: #fcfcfc;
@@ -26,6 +26,9 @@
 
   /* Transitions */
   --medium-trns: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Positions */
+  --backdrop-depth: 1;
 }
 
 /* body */
@@ -503,5 +506,67 @@ button {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--cl-green);
+}
+/* #endregion */
+
+/* #region Backdrop/Modal */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--backdrop-depth);
+
+  background-color: var(--cl-navy-blue-modal);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: var(--medium-trns);
+}
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+  max-width: 408px;
+  min-height: 584px;
+  padding: 24px;
+
+  background-color: var(--cl-dairy);
+  border-radius: 4px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+
+  transition: var(--medium-trns);
+}
+.backdrop.is-open .modal {
+  transform: translateX(-50%) translateY(-50%);
+  transition-delay: 300ms;
+}
+
+.modal-title {
+  font-weight: 500;
+  text-align: center;
+  color: var(--cl-navy-blue);
+
+  margin-top: 24px;
+}
+.modal-form {
+}
+.modal-form-field {
+}
+.modal-form-label {
+}
+.modal-form-wrapper {
+}
+.modal-form-input {
+}
+.modal-form-message {
 }
 /* #endregion */

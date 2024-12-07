@@ -608,5 +608,92 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <!-- FIXME initially not open -->
+    <div class="backdrop is-open">
+      <div class="modal">
+        <!-- TODO close button -->
+
+        <!-- caption -->
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+
+        <!-- form -->
+        <form class="modal-form" name="leave-contacts-form">
+          <!-- name -->
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user-name"> Name </label>
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-input"
+                type="text"
+                id="user-name"
+                name="user-name"
+                minlength="3"
+                placeholder=" "
+                required
+              />
+
+              <!-- TODO icons -->
+            </div>
+          </div>
+
+          <!-- phone -->
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user-phone">
+              Phone number
+            </label>
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-input"
+                type="tel"
+                name="user-phone"
+                id="user-phone"
+                placeholder="+38 (099) 123 45 67"
+                pattern="\+38 \(0\d{2}\) \d{3} \d{2} \d{2}"
+                title="Please follow next format +38 (099) 123 45 67"
+              />
+              <!-- TODO icons -->
+            </div>
+          </div>
+
+          <!-- email -->
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user-email"> Email </label>
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-input"
+                type="email"
+                name="user-email"
+                id="user-email"
+                placeholder=" "
+                required
+              />
+
+              <!-- TODO icons -->
+            </div>
+          </div>
+
+          <!-- comment -->
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user-comment">Comment</label>
+            <textarea
+              class="modal-form-message"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Enter text"
+              required
+              minlength="10"
+              maxlength="1000"
+            ></textarea>
+          </div>
+
+          <!-- TODO agreement -->
+
+          <!-- TODO style button -->
+          <button class="" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
