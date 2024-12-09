@@ -613,7 +613,11 @@
     <!-- FIXME initially not open -->
     <div class="backdrop is-open">
       <div class="modal">
-        <!-- TODO close button -->
+        <button class="modal-close-button" type="button">
+          <svg class="modal-close-button-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
 
         <!-- caption -->
         <p class="modal-title">Leave your contacts and we will call you back</p>
@@ -695,8 +699,7 @@
 
           <!-- TODO agreement -->
 
-          <!-- TODO style button -->
-          <button class="" type="submit">Send</button>
+          <button class="modal-button" type="submit">Send</button>
         </form>
       </div>
     </div>
