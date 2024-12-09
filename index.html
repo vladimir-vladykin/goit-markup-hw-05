@@ -610,8 +610,7 @@
     </footer>
 
     <!-- Modal window -->
-    <!-- FIXME initially not open -->
-    <div class="backdrop is-open">
+    <div class="backdrop">
       <div class="modal">
         <button class="modal-close-button" type="button">
           <svg class="modal-close-button-icon" width="8" height="8">
@@ -697,7 +696,39 @@
             ></textarea>
           </div>
 
-          <!-- TODO agreement -->
+          <!-- user agreement -->
+          <div class="modal-form-agreement">
+            <!-- hidden checkbox -->
+            <input
+              class="visually-hidden"
+              type="checkbox"
+              name="user-agreement"
+              id="user-agreement"
+              value="true"
+              checked
+            />
+
+            <!-- label and "visual checkbox" -->
+            <label
+              class="modal-form-agreement-description"
+              for="user-agreement"
+            >
+              <span class="modal-form-checkbox">
+                <svg class="modal-form-checkbox-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a
+                class="modal-form-agreement-link"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy Policy
+              </a>
+            </label>
+          </div>
 
           <button class="modal-button" type="submit">Send</button>
         </form>

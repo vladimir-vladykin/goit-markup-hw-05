@@ -14,7 +14,7 @@
   --cl-light-slate: #8e8f99;
   --cl-cornflower: #e7e9fc;
   --cl-cloud: #f4f4fd;
-  --cl-navy-blue-modal: #662e2f55;
+  --cl-navy-blue-modal: #2e2f4266;
   --cl-gray: #2e2f42;
   --cl-white: #ffffff;
   --cl-dairy: #fcfcfc;
@@ -532,6 +532,7 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translateX(-50%) translateY(-70%);
 
   width: 100%;
   max-width: 408px;
@@ -685,5 +686,59 @@ button {
 .modal-button:hover,
 .modal-button:focus {
   background-color: var(--cl-ocean);
+}
+
+/* user agreement */
+.modal-form-agreement {
+  margin-top: 16px;
+}
+.modal-form-agreement-description {
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: var(--cl-light-slate);
+}
+.modal-form-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border-radius: 2px;
+  border: 1px solid var(--cl-navy-blue-modal);
+  cursor: pointer;
+
+  transition: var(--medium-trns);
+  transition-property: background-color;
+}
+input[type='checkbox']:checked
+  + .modal-form-agreement-description
+  > .modal-form-checkbox {
+  background-color: var(--cl-iris);
+  /* border-color: transparent; */
+}
+.modal-form-checkbox-icon {
+  fill: var(--cl-cloud);
+  opacity: 0;
+
+  transition: var(--medium-trns);
+  transition-property: opacity;
+}
+input[type='checkbox']:checked
+  + .modal-form-agreement-description
+  > .modal-form-checkbox
+  > .modal-form-checkbox-icon {
+  opacity: 1;
+}
+.modal-form-agreement-link {
+  line-height: 1.33333;
+  text-decoration: underline solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  color: var(--cl-iris);
 }
 /* #endregion */
