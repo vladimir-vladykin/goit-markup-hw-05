@@ -547,9 +547,6 @@ button {
 .subscribe-email-input::placeholder {
   color: currentColor;
 }
-.subscribe-button-wrapper {
-  position: relative;
-}
 .subscribe-button {
   display: flex;
   align-items: center;
@@ -668,7 +665,7 @@ button {
 
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--cl-navy-blue-modal);
   background-color: transparent;
@@ -794,9 +791,9 @@ button {
   height: 16px;
   margin-right: 8px;
   border-radius: 2px;
-  border: 1px solid var(--cl-navy-blue-modal);
   cursor: pointer;
 
+  border: 1px solid rgba(46, 47, 66, 0.4);
   fill: transparent;
 
   transition: var(--medium-trns);
