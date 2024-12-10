@@ -611,22 +611,22 @@
         <div class="section-footer-subscribe-block">
           <p class="subscribe-text">Subscribe</p>
           <form class="subscribe-form" name="subscribe-form">
-            <input
-              class="subscribe-email-input"
-              type="email"
-              id="subscribe-email"
-              placeholder="E-mail"
-              required
-            />
+            <label class="subscribe-label" for="subscribe-email">
+              <input
+                class="subscribe-email-input"
+                type="email"
+                id="subscribe-email"
+                placeholder="E-mail"
+                required
+              />
+            </label>
 
             <div class="subscribe-button-wrapper">
               <button class="subscribe-button" type="submit">
                 Subscribe
-                <span class="subscribe-button-icon-wrapper">
-                  <svg class="subscribe-button-icon" width="24" height="24">
-                    <use href="./images/icons.svg#icon-subscribe"></use>
-                  </svg>
-                </span>
+                <svg class="subscribe-button-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-subscribe"></use>
+                </svg>
               </button>
             </div>
           </form>
@@ -662,7 +662,7 @@
                 required
               />
 
-              <svg class="modal-form-icon" width="18" height="18">
+              <svg class="modal-form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-name"></use>
               </svg>
             </div>
@@ -670,9 +670,7 @@
 
           <!-- phone -->
           <div class="modal-form-field">
-            <label class="modal-form-label" for="user-phone">
-              Phone number
-            </label>
+            <label class="modal-form-label" for="user-phone"> Phone </label>
             <div class="modal-form-wrapper">
               <input
                 class="modal-form-input"
@@ -682,7 +680,7 @@
                 pattern="\+38 \(0\d{2}\) \d{3} \d{2} \d{2}"
                 title="Please follow next format +38 (099) 123 45 67"
               />
-              <svg class="modal-form-icon" width="18" height="18">
+              <svg class="modal-form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </div>
@@ -701,14 +699,14 @@
                 required
               />
 
-              <svg class="modal-form-icon" width="18" height="18">
+              <svg class="modal-form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </div>
           </div>
 
           <!-- comment -->
-          <div class="modal-form-field">
+          <div class="modal-form-message-field modal-form-field">
             <label class="modal-form-label" for="user-comment">Comment</label>
             <textarea
               class="modal-form-message"
@@ -727,17 +725,14 @@
             <input
               class="visually-hidden"
               type="checkbox"
-              name="user-agreement"
-              id="user-agreement"
+              name="user-privacy"
+              id="user-privacy"
               value="true"
               checked
             />
 
             <!-- label and "visual checkbox" -->
-            <label
-              class="modal-form-agreement-description"
-              for="user-agreement"
-            >
+            <label class="modal-form-agreement-description" for="user-privacy">
               <span class="modal-form-checkbox">
                 <svg class="modal-form-checkbox-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-check"></use>
